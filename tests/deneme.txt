@@ -1,0 +1,16 @@
+x<-3
+IF x<5 THEN
+    y<-5
+ENDIF
+
+
+'x<-3\nIF x<5 THEN\n    y<-5\nENDIF'
+
+def test_if():
+    code = 'x<-3\nIF x<5 THEN\n    y<-5\nENDIF'
+    ip = Interpreter(code)
+    interpreted = ip.interpreted_code
+    exec(interpreted, globals())
+    assert y == 0
+
+---------------------------------------------------------------

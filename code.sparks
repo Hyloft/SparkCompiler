@@ -1,0 +1,9 @@
+PRINT 'N değerini giriniz.'
+READ N
+T1 <- 1; T2 <- 1
+FOR i <- 1 TO N DO
+  T <- T1-T2
+	T1 <- T2
+	T2 <- T
+REPEAT
+PRINT T
