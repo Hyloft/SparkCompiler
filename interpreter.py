@@ -137,7 +137,6 @@ def compile_file(filename):
     code = open(filename,'r',encoding='utf-8')
     interpreter = Interpreter(code.read())
     python_code = interpreter.interpreted_code
-    print(python_code)
     exec(python_code)
 
 if __name__ == '__main__':
