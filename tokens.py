@@ -42,11 +42,12 @@ PRINT = Token('PRINT',r'^(\s+)?(PRINT)\s')
 READ = Token('READ',r'^(\s+)?(READ)\s')
 
 ### ASSIGNMENT
-ASSIGNMENT_ARRAY = Token('ASSIGNMENT_ARRAY',r'^(\s+)?\w+\[+[\d,]+\]$',max_count=255)
+ASSIGNMENT_ARRAY = Token('ASSIGNMENT_ARRAY',r'^(\s+)?\w+(\s)?\[+[\w,]+\]$',max_count=255)
 ASSIGNMENT = Token('ASSIGNMENT',r'<-',max_count=255)
 
 ### NULL LINES
-NULL_LINE = Token('NULL_LINE',r'^(\s+)$')
+NULL_LINE = Token('NULL_LINE',r'^(\s)+$')
+EMPTY_LINE = Token('NULL_LINE',r'^$')
 
 tokens_with_order = [
     ONE_LINE_IF,IF,ELSE,ELSE_IF,ENDIF,
@@ -54,5 +55,5 @@ tokens_with_order = [
     FOR,REPEAT,
     PRINT, READ,
     ASSIGNMENT, ASSIGNMENT_ARRAY ,
-    NULL_LINE   
+    NULL_LINE,EMPTY_LINE
 ]

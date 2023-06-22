@@ -9,9 +9,9 @@ from operators import arithmetic_operators,logical_operators,comparison_operator
 
 import numpy as np
 
-reg_arr_def = r'\w+\[+[0-9,]+\]'
+reg_arr_def = r'\w+(\s)?\[+[\w,]+\]'
 
-reg_arr = r'\w+\[+[\w+,]+\]'
+reg_arr = r'\w+(\s)?\[+[\w,]+\]'
 
 class Interpreter():
     

@@ -1,6 +1,12 @@
 N<-5
 T<-0
+G [N]
 FOR I<-1 TO N DO 
+  
   T<-T+I*(I+1)/2
+
+  G[I]<-T
+
 REPEAT 
-PRINT T
+  
+PRINT G [N]
