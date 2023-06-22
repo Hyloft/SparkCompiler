@@ -12,6 +12,7 @@ class Token():
             raise Exception(f'"{self.token}" token error. max_count and regex size not match.')
 
     def match_token(self,text:str)->bool:
+        text = text.strip()
         match = [False for i in self.regex]
         
         for i in range(0,len(self.regex)):

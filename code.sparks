@@ -1,9 +1,6 @@
-PRINT 'N değerini giriniz.'
-READ N
-T1 <- 1; T2 <- 1
-FOR i <- 1 TO N DO
-  T <- T1-T2
-  T1 <- T2
-  T2 <- T
-REPEAT
+N<-5
+T<-0
+FOR I<-1 TO N DO 
+  T<-T+I*(I+1)/2
+REPEAT 
 PRINT T
